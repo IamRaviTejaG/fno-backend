@@ -1,11 +1,32 @@
 module.exports = {
   NIFTY_TRADER: {
     OI_DATA_URL: 'https://api.niftytrader.in/webapi/Option/getOiData',
-    OI_DATA_REQUEST_DATA: {
+    OI_CHANGE_DATA_URL: 'https://api.niftytrader.in/webapi/Option/getOiChangeData',
+    NIFTY_OI_LIST_REQUEST_DATA: {
       reqType: 'niftyoilist',
       reqDate: ''
     },
-    OI_DATA_REQUEST_HEADERS: {
+    BANK_NIFTY_OI_LIST_REQUEST_DATA: {
+      reqType: 'bankniftyoi',
+      reqDate: ''
+    },
+    FIN_NIFTY_OI_LIST_REQUEST_DATA: {
+      reqType: 'finniftyoilist',
+      reqDate: ''
+    },
+    NIFTY_OI_CHANGE_REQUEST_DATA: {
+      reqType: 'niftyoichange',
+      reqDate: ''
+    },
+    BANK_NIFTY_OI_CHANGE_REQUEST_DATA: {
+      reqType: 'bankniftyoichange',
+      reqDate: ''
+    },
+    FIN_NIFTY_OI_CHANGE_REQUEST_DATA: {
+      reqType: 'finniftyoichange',
+      reqDate: ''
+    },
+    REQUEST_HEADERS: {
       authority: 'api.niftytrader.in',
       accept: 'application/json, text/plain, */*',
       authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxODIxMjYiLCJqdGkiOiIwMTY2NTNiMS0wMWZlLTQ5OGYtOGQyNi03NDFlZTQ5NmIwZWEiLCJleHAiOjE2NDQ3MjM3MzAsImlzcyI6Ik5pZnR5dHJhZGVyaGVscC5jb20iLCJhdWQiOiJOaWZ0eXRyYWRlcmhlbHAuY29tIn0.tHSaU8B_h6mZsbMR0d2sOZHqoonW11uaslwK7p3Gb9Y',
