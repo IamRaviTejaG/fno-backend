@@ -1,19 +1,19 @@
-import csv from 'csvtojson';
-import request from 'request';
-import redisClient from '../config/redis';
+import csv from 'csvtojson'
+import request from 'request'
+import redisClient from '../config/redis'
 
-let constants = require('../config/constants')
+const constants = require('../config/constants')
 let count = 0
 
 csv().fromStream(request.get('https://www1.nseindia.com/content/fo/fo_mktlots.csv')).subscribe(row => {
-  let symbol = row.SYMBOL
-  let lotSizes = []
+  const symbol = row.SYMBOL
+  const lotSizes = []
   delete row.SYMBOL
   delete row.UNDERLYING
 
   Object.keys(row).forEach(k => {
     if (!constants.INVALID_LOTSIZE_ROUTE_KEYWORDS.includes(row[k])) {
-      lotSizes.push({ expiry: k, 'lotSize': row[k] })
+      lotSizes.push({ expiry: k, lotSize: row[k] })
     }
   })
 
@@ -29,4 +29,4 @@ csv().fromStream(request.get('https://www1.nseindia.com/content/fo/fo_mktlots.cs
     console.log(`Error loading lot size data into Redis. ${err}`)
     process.exit(1)
   })
-});
+})

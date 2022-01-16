@@ -22,7 +22,23 @@ module.exports = {
   },
   NSE_INDIA: {
     INDICES_DATA_URL: 'https://www.nseindia.com/api/option-chain-indices?symbol=',
-    EQUITY_DATA_URL: 'https://www.nseindia.com/api/option-chain-equities?symbol='
+    EQUITY_DATA_URL: 'https://www.nseindia.com/api/option-chain-equities?symbol=',
+    REQUEST_HEADERS: {
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:95.0) Gecko/20100101 Firefox/95.0',
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.5',
+      'Accept-Encoding': 'gzip, deflate, br',
+      DNT: '1',
+      Connection: 'keep-alive',
+      Cookie: 'AKA_A2=A; ak_bmsc=6DE9651D8202CDA97C3C1FA429A67104~000000000000000000000000000000~YAAQjHMsMQ0lBU9+AQAAZw5fYw6z9qUkvyaQxp75uYLyA20ivnyjxHyuOI2nL4nw0dZun6Z9yRFZnZqvcb7Mvf8CeNN6KtaqlNmFbRcEkgahHP0i41sQ5SJyKMWrisAHTdk/0AXVTgQhbjJ4HMvxMfGAl/jkPqVE5etZnEiNaep5mcMdE0N6C/D/4jp2zaMA6wAG9AoRgUwUvhibVMmImIGublL5DgvOZVaVk+wIbKwGIjwJ4FOkFz0r0+fim3pjCWL7MwIFfjMQrdKXN/EW5cKODuu1ik9WmIJZyO5DjK2+MyNt4PlVSJctDQMiCmFwhLEY1FSj8bi5Lb09yK2KGKYEyK/GvVIloOtzM/TmgBHlue4kHF5mYNg7Vb7DGs+p7yi+mSVR0cpNNlSAs5aJrzciBxwnRPftlRoA; bm_sv=C9D1CE9467C1D0F5A4E3788D74F484C7~M1w94uBNFoy0ljWj4zJiTMwsmlp+sD4eSc5QmrgBfs0s0/6HbOLi2+1quwWY+hTJQ1OmcfGuDs7OJZ/rw9pC+XLfxarkFwKoLiPEMxG8PM8biXw848RgERwWVqhJr4dxm9xKuMYq7CtducWNrs1u4Kh4Bm0jInswalDioOMi8fw=; nsit=de-2IOgRNyd-VJy8DPESd1oN; nseappid=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkubnNlIiwiYXVkIjoiYXBpLm5zZSIsImlhdCI6MTY0MjM0NDY2NCwiZXhwIjoxNjQyMzQ4MjY0fQ.RHDelsiihZQRwHeNiFOUjqF9T8qZWDHq46ZUZ9x-v-M; bm_mi=2DD30816846B49AA8F27CB35AF67246C~XjHJrybkhoM2HQCqynUV3bgNHWiLhLIX7U8kg+gxano4MeoXNSnhmldq3PLJhCufNlCUJIZbJdxPOD3muYcGce2DXZQqshmVRHR411+CAQBJMlb/H+S1PV6rSRFwj2cII6U7sWx4EA6i5fzKwhH8wI+A3cyZyL1wEJnX/nZi5lHnOgWPgWCClBYakae7DYCMGkK2dxrc3w8zaq7DWL9xsV5LdCflKAEagUUd0cMe+W8MmepQMjI5kCK6oyEmURp6Axbs11uQtY35ULtqU/DMVA==; RT="z=1&dm=nseindia.com&si=16fd3c85-dfca-453b-813b-5ec8ec948beb&ss=kyhdlx68&sl=1&tt=1ah&bcn=%2F%2F684d0d4b.akstat.io%2F&ld=79t&ul=shf&hd=sl1"; ak_bmsc=326C9CDD97F617290E87E4C06199C81D~000000000000000000000000000000~YAAQjHMsMa9jBE9+AQAAOAQmYw7skKnsCDjr/nAeUyTioRJHo9G8xQBovm8ztDfZuF7GNdF+B2HN7uHFeeIDXpbAvfshII4CTp68OEhphpcByX+zisz+LFWzo0JSqfIek6vYk3ybA9dOD9mqPQ0Uq3x3OBhQD6AOLpe4hzf8j+DKKNmVlOx3paXdHLICMpARgC97Xj+L+8JSanT9GuoRMszvMlfAa+qc3X//ehojxn0VYxEhz9IoCm415BPxzxNpwTv4zaidyNpZiIimSvvAtir9qzl0lpkWMjeblEPPt39jeYALepn6Av+6ruBRm25Ze3yuzXYLK4+3ze+KC9b8sYJbDUcqVmGGLM5DQ9C3Geq8dNaEe9JcDXIhoyk=; bm_sv=5CBF29097AB50595D107BC6B211EEBE8~SEdCkTF2i6osaEIlzhaWRaCr5XZXLgp8QtHNDSB1f93s7JLIMH2eL51O4GqA5JbgeQRkoKnsgzVAHpTFLIXcbGOwoTT6E28pBqokivIU1ssZs+zPtFH84bzQZlA/s1FCHT6kEu+J3zDM+eQo76QcYqW5+aKXHfj1GfPtisLM5vc=',
+      'Upgrade-Insecure-Requests': '1',
+      'Sec-Fetch-Dest': 'document',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-Site': 'none',
+      'Sec-Fetch-User': '?1',
+      'Cache-Control': 'max-age=0',
+      TE: 'trailers'
+    }
   },
   SYMBOLS: {
     INDICES: ['NIFTY', 'BANKNIFTY', 'FINNIFTY'],
