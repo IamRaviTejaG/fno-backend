@@ -10,7 +10,7 @@ export default {
     } else if (constants.SYMBOLS.EQUITY.includes(symbol)) {
       baseUrl = constants.NSE_INDIA.EQUITY_DATA_URL
     } else {
-      res.status(403).json({ status: 'failure', result: 'Invalid symbol' })
+      res.status(400).json({ status: 'failure', result: 'Invalid symbol' })
     }
 
     const config = {
@@ -34,7 +34,7 @@ export default {
       if (err.response.status === 401) {
         res.status(401).json({ status: 'failure', symbol: symbol, result: 'Could not fetch option chain' })
       } else {
-        res.status(500).json({ status: 'failure', symbol: symbol, error: err })
+        res.status(400).json({ status: 'failure', symbol: symbol, error: err })
       }
     })
   }

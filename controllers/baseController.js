@@ -21,8 +21,12 @@ export default {
       if (result) {
         res.status(200).json({ status: 'success', result: JSON.parse(result) })
       } else {
-        res.status(403).json({ status: 'failed', result: 'Invalid symbol' })
+        res.status(400).json({ status: 'failed', result: 'Invalid symbol' })
       }
     })
+  },
+
+  index: (_req, res) => {
+    res.status(200).json({ status: 'success', result: 'Hello!' })
   }
 }
