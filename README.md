@@ -27,9 +27,12 @@ npm start
 ```
 
 ## API Documentation
+The base URL prefix is `/api`. So all the endpoints below are expected to have this prefix.
+
 1. `/`: Base page, to check if the service uptime.
 2. `/list/:type?`: Gets list of available/listed F&O symbols. `type` is optional, defaults to `all`. The other variants include `INDEX`/`EQUITY`.
 3. `/lotsize/:symbol`: Gets the lot size info for the given symbol.
 4. `/chain/:symbol`: Gets the option chain data for the given symbol.
 5. `/oi/live/:symbol`: Gets the live OI data for given INDEX.
 6. `/oi/change/:symbol`: Gets the OI change data for given INDEX.
+7. `/status`: Gets the current market status, for all the 4 segments (capital, commodity, currency, debt).

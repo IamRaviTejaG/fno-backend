@@ -1,3 +1,5 @@
+import axios from 'axios'
+import path from 'path'
 import redisClient from '../config/redis'
 
 const constants = require('../config/constants')
@@ -26,7 +28,29 @@ export default {
     })
   },
 
+  getMarketStatus: (_req, res) => {
+    const config = {
+      method: 'get',
+      url: constants.NSE_INDIA.MARKET_STATUS_URL
+    }
+
+    axios(config).then(response => {
+      const data = response.data
+      res.status(200).json({ status: 'success', marketStatus: data.marketState })
+    }).catch(err => {
+      if (err.response.status === 401) {
+        res.status(401).json({ status: 'failure', symbol: symbol, result: 'Could not fetch market status' })
+      } else {
+        res.status(400).json({ status: 'failure', symbol: symbol, error: err })
+      }
+    })
+  },
+
+  home: (_req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, '../static/readme.html'))
+  },
+
   index: (_req, res) => {
-    res.status(200).json({ status: 'success', result: 'Hello!' })
+    res.status(200).json({ status: 'success', result: "There's only one way to go, Up Up & Up!" })
   }
 }

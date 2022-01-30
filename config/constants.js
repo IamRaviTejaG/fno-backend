@@ -42,6 +42,7 @@ module.exports = {
     }
   },
   NSE_INDIA: {
+    MARKET_STATUS_URL: 'https://www.nseindia.com/api/marketStatus',
     INDICES_DATA_URL: 'https://www.nseindia.com/api/option-chain-indices?symbol=',
     EQUITY_DATA_URL: 'https://www.nseindia.com/api/option-chain-equities?symbol=',
     REQUEST_HEADERS: {
@@ -51,7 +52,7 @@ module.exports = {
       'Accept-Encoding': 'gzip, deflate, br',
       DNT: '1',
       Connection: 'keep-alive',
-      Cookie: 'nseQuoteSymbols=[{"symbol":"NIFTY","identifier":"OPTIDXNIFTY20-01-2022PE18200.00","type":"equity"},{"symbol":"BANKNIFTY","identifier":"OPTIDXBANKNIFTY20-01-2022CE38300.00","type":"equity"},{"symbol":"INFY","identifier":"OPTSTKINFY27-01-2022CE1940.00","type":"equity"}]; AKA_A2=A; ak_bmsc=2B139BC4619568DDD04B87702FB94E98~000000000000000000000000000000~YAAQjHMsMbyaBU9+AQAA+WzIYw4Yut3dBnU9t44QTTfSmqwzyWxjlSFpc6ceVHvWcT8pZIYjtjE4+80dtV0jPgQ9qapPlJgPcwVHfJYVc0svy/tj2ML0k27TZCNfNP1Q12Z1TWhMXn5hhooJm/IqP44rXwX3kkg0yHl740Und2s1fJ5m4+qOD5xyevtSbNj2267u+KT559kBnq+0UAeGXu014OK40JEeTw+BEI8LqaOhwLX7/zvMBYX2dk+BGABysAciv/QISID/xEkzceNXjCuAWT2HFGulSl1so2T2rdMzHai9kl12POokl4mF2/8pvYMcqKv7UenIS3nPXM+12dh6DgCzanfRperqWm7cJjYCwfouUXMh35eoROYUFZ+LIo22+yQpcHzu; bm_sv=B73EF64B8AED0B0A8D422BD49E11027B~3P9u9KlaOO8Bhe7EQks8vwgf3lmJF6LxnmmEtF2wlv7hL44BKF9kWnZIz5ecGFagNPlVrEp1lgwICkod37Gpg6TcDNu0fErG16cuE/gdqWbbRtPFt+fi2MgwpMmcYJkZP8e+3obEY7Wzg5b56PTerpKLQOG66AdyZLhkp6beq+s=',
+      Cookie: 'AKA_A2=A; ak_bmsc=3F38CFDB0BBBEEBC9E15689D422A7EE4~000000000000000000000000000000~YAAQjHMsMSecvXt+AQAAXwrJqQ7dR7RS7Lhp2xfS9rvGJmvyAs+0dlY88rTXHu+UFCTPJVfLF/fUTigiVF9zhAf4CpmYh48RzDzHqKlZSv9ZP62yX6haukTLYGEIsksu5Z8jlHlhdXPt3ailXEf6h4F5Fuuix49WShz2Ll860Sg5eUPh/riAyipfVG1sfhyX6pSgLrJYwrynYjaAHEa2R6Lg9GmcWmarWJ4zqwIHRq0MHyFJqD1+aSQwZC2xqT7xO6Ggl+95NF52cid9NcVGG+iePz1mtMNyfbelwDOnYbmaWDpwTD4ukoYWgo3dRJlGB/Ij0hTY7yCje0pf0tOmo+mNHSyAmy/h1o9TN460VXbO3zh1K82kGi1WpIiRb2evOHARen6/e/UF/w==',
       'Upgrade-Insecure-Requests': '1',
       'Sec-Fetch-Dest': 'document',
       'Sec-Fetch-Mode': 'navigate',

@@ -3,14 +3,19 @@ import oiController from '../controllers/oiController'
 import optionChainController from '../controllers/optionChainController'
 
 const routes = router => {
-  router.get('/', baseController.index)
-  router.route('/list/:type?').get(baseController.getList)
-  router.route('/lotsize/:symbol').get(baseController.getLotSize)
+  router.get('/', baseController.home)
 
-  router.route('/chain/:symbol').get(optionChainController.getOptionChain)
+  router.get('/api', baseController.index)
 
-  router.route('/oi/live/:symbol').get(oiController.getLiveOi)
-  router.route('/oi/change/:symbol').get(oiController.getOiChange)
+  router.route('/api/list/:type?').get(baseController.getList)
+  router.route('/api/lotsize/:symbol').get(baseController.getLotSize)
+
+  router.route('/api/chain/:symbol').get(optionChainController.getOptionChain)
+
+  router.route('/api/oi/live/:symbol').get(oiController.getLiveOi)
+  router.route('/api/oi/change/:symbol').get(oiController.getOiChange)
+
+  router.route('/api/status').get(baseController.getMarketStatus)
 }
 
 export default routes
