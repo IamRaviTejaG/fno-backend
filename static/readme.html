@@ -3,12 +3,14 @@
 <p class="has-line-data" data-line-start="2" data-line-end="3">Backend for tracking stats of F&amp;O stocks listed on NSE. Needs a decent frontend for this to make more sense. Will work on the frontend part soon.</p>
 <p class="has-line-data" data-line-start="4" data-line-end="5">Data is currently streamed from <a href="https://www.nseindia.com/">NSE India</a> &amp; <a href="https://www.niftytrader.in/">Nifty Trader</a> for stocks &amp; indices OI data.</p>
 <h2 class="code-line" data-line-start=6 data-line-end=7><a id="API_Documentation_6"></a>API Documentation</h2>
+<p class="has-line-data" data-line-start="7" data-line-end="8">The base URL prefix is <code>/api</code>. So all the endpoints below are expected to have this prefix.</p>
 <ol>
-<li class="has-line-data" data-line-start="7" data-line-end="8"><code>/</code>: Base page, to check if the service uptime.</li>
-<li class="has-line-data" data-line-start="8" data-line-end="9"><code>/list/:type?</code>: Gets list of available/listed F&amp;O symbols. <code>type</code> is optional, defaults to <code>all</code>. The other variants include <code>INDEX</code>/<code>EQUITY</code>.</li>
-<li class="has-line-data" data-line-start="9" data-line-end="10"><code>/lotsize/:symbol</code>: Gets the lot size info for the given symbol.</li>
-<li class="has-line-data" data-line-start="10" data-line-end="11"><code>/chain/:symbol</code>: Gets the option chain data for the given symbol.</li>
-<li class="has-line-data" data-line-start="11" data-line-end="12"><code>/oi/live/:symbol</code>: Gets the live OI data for given INDEX.</li>
-<li class="has-line-data" data-line-start="12" data-line-end="13"><code>/oi/change/:symbol</code>: Gets the OI change data for given INDEX.</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10"><code>/</code>: Base page, to check if the service uptime.</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11"><code>/list/:type?</code>: Gets list of available/listed F&amp;O symbols. <code>type</code> is optional, defaults to <code>all</code>. The other variants include <code>INDEX</code>/<code>EQUITY</code>.</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12"><code>/lotsize/:symbol</code>: Gets the lot size info for the given symbol.</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13"><code>/chain/:symbol</code>: Gets the option chain data for the given symbol.</li>
+<li class="has-line-data" data-line-start="13" data-line-end="14"><code>/oi/live/:symbol</code>: Gets the live OI data for given INDEX.</li>
+<li class="has-line-data" data-line-start="14" data-line-end="15"><code>/oi/change/:symbol</code>: Gets the OI change data for given INDEX.</li>
+<li class="has-line-data" data-line-start="15" data-line-end="16"><code>/status</code>: Gets the current market status, for all the 4 segments (capital, commodity, currency, debt).</li>
 </ol>
 </body></html>
