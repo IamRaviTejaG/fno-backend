@@ -8,7 +8,8 @@
     "linter": "npm run lint",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore node_modules --copy-files",
     "start": "npm run build && node -r dotenv/config dist/index.js --no-deprecation",
-    "lotSizeScript": "npm run build && node -r dotenv/config dist/scripts/lotSizeData.js --no-deprecation"
+    "getLotSizes": "npm run build && node -r dotenv/config dist/scripts/lotSizeData.js --no-deprecation",
+    "getSymbolsList": "npm run build && node -r dotenv/config dist/scripts/getList.js --no-deprecation"
   },
   "author": "Ravi Teja Gannavarapu",
   "license": "MIT",
@@ -18,6 +19,7 @@
     "dotenv": "^12.0.4",
     "express": "^4.17.2",
     "ioredis": "^4.28.3",
+    "node-html-parser": "^5.2.0",
     "request": "^2.88.2",
     "standard": "^16.0.4"
   },

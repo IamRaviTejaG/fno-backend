@@ -15,9 +15,20 @@ npm i
 Install redis for your OS using the tutorial here: https://redis.io/download
 
 ### Step 3:
-Start redis, and run the `lotSizeScript` script using:
+Start redis, and please run the following scripts in the following order.
+1. Run the `getSymbolsList` script using:
 ```bash
-npm run lotSizeScript
+npm run getSymbolsList
+```
+
+2. Run the `getLotSizes` script using:
+```bash
+npm run getLotSizes
+```
+
+Or in one go:
+```bash
+npm run getSymbolsList && npm run getLotSizes
 ```
 
 ### Step 4:
