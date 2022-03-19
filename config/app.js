@@ -3,7 +3,7 @@ import morgan from 'morgan'
 import routes from '../routes/routes'
 
 const app = express()
-app.use(morgan('common'))
+app.use(morgan('combined'))
 
 routes(app)
 
